@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+<!-- 레이아웃 ( 위젯을 어떤식으로 배치할지에 대한 방법론)
+Relative<= 객체의 상대적인 위치관계를 정의해서 위치를 지정.
+위치를 지정하지 않으면 기본적으로 부모기준 상단 왼쪽 위치
+-->
+    <Button
+        android:id="@+id/button"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="버튼1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="#646FA6"/>
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="버튼2"
+        android:backgroundTint="#8F3667"
+        android:layout_centerInParent="true"/>
+    <!-- 상대 레이아웃은 부모기준으로 위치를 잡는것보다
+    다른 위젯을 기준으로 위치를 잡는 형태를 더 많이씀-->
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="버튼 3"
+        android:layout_alignLeft="@+id/button"
+        android:layout_alignTop="@id/btn2"/>
+
+</RelativeLayout>

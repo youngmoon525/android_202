@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <!-- ctrl + shift + / 주석
+        액티비티에 어떤 위젯을 추가할때는 반드시 Layout이라는
+        판이 필요하다.(위젯을 어떤식으로 정렬할지를 정해놓은게 레이아웃종류)
+        Android에서 크기를 지정할때 쓰는 단위는 px(x) => dp(o)
+        크기를 지정할때 dp가 아닌 match_parent,wrap_content
+        match_parent = 부모 크기만큼 늘림.
+        wrap_content = 위젯의 기본크기만큼 그대로 놔둠.(기본 사이즈)
+        (위젯 안에 들어가는 글씨 크기가 늘어나면 동시에 위젯크기가 커짐)
+        ↑ 레이아웃의 경우에는 내가 담고있는 위젯들의 크기에 따라도 바뀜
+         id★(중요함): xml(디자인)=> .java파일에서 찾을수있는 식별자.
+         -->
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Hello World KYM"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="토스트 메세지 보여줌"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn1" />
+
+    <Button
+        android:id="@+id/btn_new"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="새로운 액티비티 띄우기"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
