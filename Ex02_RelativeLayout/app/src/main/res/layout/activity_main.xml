@@ -6,32 +6,165 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-<!-- 레이아웃 ( 위젯을 어떤식으로 배치할지에 대한 방법론)
-Relative<= 객체의 상대적인 위치관계를 정의해서 위치를 지정.
-위치를 지정하지 않으면 기본적으로 부모기준 상단 왼쪽 위치
--->
+
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn1"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:text="버튼1"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:backgroundTint="#646FA6"/>
+        android:backgroundTint="#111111"
+        android:text="버튼1" />
+
     <Button
         android:id="@+id/btn2"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:text="버튼2"
-        android:backgroundTint="#8F3667"
-        android:layout_centerInParent="true"/>
-    <!-- 상대 레이아웃은 부모기준으로 위치를 잡는것보다
-    다른 위젯을 기준으로 위치를 잡는 형태를 더 많이씀-->
+        android:layout_centerInParent="true"
+        android:backgroundTint="#559999"
+        android:text="버튼2" />
+    <!-- * android:layout_alignParentLeft - 부모(Parent) 영역
+    내에서 왼쪽(Left)에 배치.
+    > 속성 값에는 true 또는 false 사용.
+    > 뷰(View) Left = 부모(Parent) Left.
+
+    * android:layout_alignParentTop - 부모(Parent)
+    영역 내에서 위쪽(Top)에 배치.
+    > 속성 값에는 true 또는 false 사용.
+    > 뷰(View) Top = 부모(Parent) Top.
+
+    * android:layout_alignParentRight - 부모(Parent) 영역 내에서
+    오른쪽(Right)에 배치.
+    > 속성 값에는 true 또는 false 사용.
+    > 뷰(View) Right = 부모(Parent) Right.
+
+    * android:layout_alignParentBottom - 부모(Parent)
+    영역 내에서 아래쪽(Bottom)에 배치.
+    > 속성 값에는 true 또는 false 사용.
+    > 뷰(View) Bottom = 부모(Parent) Bottom.
+
+    * android:layout_centerHorizontal - 부모(Parent)
+    영역의 가로(horizontal) 방향 가운데(center) 배치.
+    > 속성 값에는 true 또는 false 사용.
+
+    * android:layout_centerVertical - 부모(Parent)
+    영역의 세로(vertical) 방향 가운데(center) 배치.
+    > 속성 값에는 true 또는 false 사용.
+
+    * android:layout_centerInParent - 부모(Parent)
+    영역의 정 중앙(center)에 배치.
+    > 속성 값에는 true 또는 false 사용.
+
+    * android:layout_alignParentStart - 부모(Parent)
+    영역 내에서 시작 지점(Start)에 배치.
+    > 속성 값에는 true 또는 false 사용.
+    > 뷰(View) Start = 부모(Parent) Start.
+
+    * android:layout_alignParentEnd - 부모(Parent)
+    영역 내에서 끝 지점(End)에 배치.
+    > 속성 값에는 true 또는 false 사용.
+    > 뷰(View) End = 부모(Parent) End.
+    -->
+
+
+    <!-- android:layout_alignLeft - 뷰(View)의 왼쪽(Left)을
+    기준 뷰(Anchor View)의 왼쪽(Left)에 맞춤.
+    > 속성 값에는 기준 뷰(Anchor View)의 ID를 지정.
+    > 뷰(View) Left = 기준 뷰(Anchor View) Left
+
+    * android:layout_alignTop - 뷰(View)의 위(Top)을
+    기준 뷰(Anchor View)의 위(Top)에 맞춤.
+    > 속성 값에는 기준 뷰(Anchor View)의 ID를 지정.
+    > 뷰(View) Top = 기준 뷰(Anchor View) Top
+
+    * android:layout_alignRight - 뷰(View)의 오른쪽(Right)을
+    기준 뷰(Anchor View)의 오른쪽(Right)에 맞춤.
+    > 속성 값에는 기준 뷰(Anchor View)의 ID를 지정.
+    > 뷰(View) Right = 기준 뷰(Anchor View) Right
+
+    * android:layout_alignBottom - 뷰(View)의 아래(Bottom)를
+    기준 뷰(Anchor View)의 아래(Bottom)에 맞춤.
+    > 속성 값에는 기준 뷰(Anchor View)의 ID를 지정.
+    > 뷰(View) Bottom = 기준 뷰(Anchor View) Bottom
+    -->
+
+
     <Button
+        android:id="@+id/btn3"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:text="버튼 3"
-        android:layout_alignLeft="@+id/button"
-        android:layout_alignTop="@id/btn2"/>
+        android:layout_alignLeft="@+id/btn1"
+        android:layout_alignTop="@id/btn2"
+        android:layout_marginLeft="-21dp"
+        android:layout_marginTop="-108dp"
+        android:backgroundTint="#441122"
+        android:text="버튼3" />
+
+    <Button
+        android:id="@+id/btn4"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignBaseline="@id/btn2"
+        android:backgroundTint="#441122"
+        android:text="버튼4"
+
+        />
+
+    <Button
+        android:id="@+id/btn5"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_toLeftOf="@id/btn2"
+        android:backgroundTint="#341122"
+        android:text="버튼5" />
+
+    <Button
+        android:id="@+id/btn6"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/btn2"
+        android:layout_marginTop="-142dp"
+        android:backgroundTint="#111122"
+        android:text="버튼6" />
+    <!--
+    * android:layout_alignBaseline - 뷰(View)의 폰트
+    기준선(Baseline)을 기준 뷰(View)의 폰트 기준선(Baseline)에 맞춤.
+    > 속성 값에는 기준 뷰(Anchor View)의 ID를 지정.
+    > 뷰(View) Baseline = 기준 뷰(Anchor View) Baseline
+
+    * android:layout_alignStart - 뷰(View)의 시작(Start)을
+    기준 뷰(Anchor View)의 시작(Start)에 맞춤.
+    > 속성 값에는 기준 뷰(Anchor View)의 ID를 지정.
+    > 뷰(View) Start = 기준 뷰(Anchor View) Start
+
+    * android:layout_alignEnd - 뷰(View)의 끝(End)을
+    기준 뷰(Anchor View)의 끝(End)에 맞춤.
+    > 속성 값에는 기준 뷰(Anchor View)의 ID를 지정.
+    > 뷰(View) End = 기준 뷰(Anchor View) End
+
+    * android:layout_toLeftOf - 기준 뷰(View)의 왼쪽(Left)에 배치.
+    > 속성 값에는 기준 뷰(Anchor View)의 ID를 지정.
+    > 뷰(View) Right = 기준 뷰(Anchor View) Left
+
+    * android:layout_above - 기준 뷰(View)의 위(Above)에 배치.
+    > 속성 값에는 기준 뷰(Anchor View)의 ID를 지정.
+    > 뷰(View) Bottom = 기준 뷰(Anchor View) Top
+
+    * android:layout_toRightOf - 기준 뷰(View)의 오른쪽(Right)에 배치.
+    > 속성 값에는 기준 뷰(Anchor View)의 ID를 지정.
+    > 뷰(View) Left = 기준 뷰(Anchor View) Right
+
+    * android:layout_below - 기준 뷰(View)의 아래(Below)에 배치.
+    > 속성 값에는 기준 뷰(Anchor View)의 ID를 지정.
+    > 뷰(View) Top = 기준 뷰(Anchor View) Bottom
+
+    * android:layout_toStartOf - 기준 뷰(View)의 시작(Start)에 배치.
+    > 속성 값에는 기준 뷰(Anchor View)의 ID를 지정.
+    > 뷰(View) End = 기준 뷰(Anchor View) Start
+
+    * android:layout_toEndOf - 기준 뷰(View)의 끝(End)에 배치.
+    > 속성 값에는 기준 뷰(Anchor View)의 ID를 지정.
+    > 뷰(View) Start = 기준 뷰(Anchor View) End-->
+
 
 </RelativeLayout>

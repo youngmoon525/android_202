@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="horizontal">
+<!-- orientation <= 리니어레이아웃에서 핵심이 되는 속성
+    차곡차곡 하나씩 위젯을 쌓는 형태의 레이아웃인데.(방법)
+    어떤 방법으로 쌓을건지를 지정하는 속성
+    기본 : horizental(가로) , vertical(세로)
+    LinearLayout<= 많이 쓰이는 이유는 중간에 어떤 위젯을 끼워넣어도
+    상대적으로 속성을 제약으로 두지 않기때문에 맘대로 끼워넣고 지우고해도
+    디자인이 크게 망가지지 않음.(디자인 속도도 빠름)
+ -->
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
+
+
+</LinearLayout>

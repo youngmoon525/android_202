@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--리니어는 한쪽 방향으로만 쌓을수있는 단점이있음
+    리니어를 중첩시키면 양쪽방향모두 사용가능함.
+    ex)부모 vertical(세로만됨) <=안쪽에 horizental(가로)자식 리니어-->
+    <!-- 세로로 반으로 분할하기
+    안보고 .-->
+
+
+</LinearLayout>

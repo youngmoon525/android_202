@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <!-- 리니어 레이아웃을 중첩 시켜보기.
+        weight 속성을 사용해보기 ( 무게 ? )
+        horizental 가로분할을 할경우 밑에 위젯을 쌓을수가없음
+        == 높이만큼은 전부다 하나의 위젯이 차지함.
+        vertical 세로분할을 할경우 옆에 위젯을 쌓을수가없음
+        == 넓이만큼은 전부다 하나의 위젯이 차지함.
+        레이아웃이 기본적으로 가지는 넓이는 0임(차지안함 공간)
+        레이아웃이 기본적으로 가지는 크기가 있으려면
+        안쪽에 위젯이 있으면 위젯기준임(또는 weight)
+    -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#123456"
+        android:layout_weight="2"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#344676"
+        android:layout_weight="1"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#787878"
+        android:layout_weight="1"
+        />
+</LinearLayout>
