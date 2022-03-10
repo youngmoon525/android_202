@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+<!--attribute (속성) 위젯들은 공통적으로 가지고있는 속성이 있다.-->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="보통 버튼"
+        android:backgroundTint="#123456"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="마진 탑"
+        android:backgroundTint="#123456"
+        android:layout_marginTop="50dp"/>
+    <!--부모크기만큼 위젯을 늘려놓고 마진을 주는경우에는 해당하는
+    방향으로 뷰의 크기가 작아짐.-->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="마진 레프트"
+        android:backgroundTint="#123456"
+        android:layout_marginLeft="50dp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="패딩"
+        android:backgroundTint="#123456"
+        android:padding="50dp"/>
+
+<!-- gravity (중력) 안드로이드에서 위젯을 정렬시킬때 사용하는 방법
+     gravity : 내부에 있는 속성을 정렬할때 사용한다.
+     or연산자를 붙여서 다른 정렬 속성을 연결시킬수있다.
+        -->
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:text="Gravity"
+        android:backgroundTint="#123456"
+        android:gravity="center|right"/>
+
+<!--layoutgravity : 위젯을 부모기준으로 어디에 위치시킬지(정렬)
+                정하는 속성 -->
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="Gravity"
+        android:backgroundTint="#123456"
+        android:layout_gravity="center"/>
+
+</LinearLayout>
