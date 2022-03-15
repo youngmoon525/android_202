@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--사용자에게 어떤 값을 입력받기 위한 위젯(뷰)
+    hint == placeholder -->
+    <EditText
+        android:id="@+id/edt_text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="숫자를 하나 입력해주세요."
+        />
+    <EditText
+        android:id="@+id/edt_text2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="두번째 숫자를 입력해주세요."
+        />
+    <Button
+        android:id="@+id/btn_plus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="더하기"/>
+
+</LinearLayout>

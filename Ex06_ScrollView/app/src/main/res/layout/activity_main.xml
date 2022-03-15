@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+    <!--버튼 하나와 스크롤뷰를 세로로 정렬-->
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="이미지 바꾸기"/>
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/imgv1"
+            android:layout_width="2000dp"
+            android:layout_height="2000dp"
+            android:src="@drawable/ic_launcher_foreground"/>
+            <ImageView
+                android:id="@+id/imgv2"
+                android:layout_width="2000dp"
+                android:layout_height="2000dp"
+                android:src="@drawable/ic_launcher_background"/>
+
+        </FrameLayout>
+    </ScrollView>
+
+    </HorizontalScrollView>
+</LinearLayout>
