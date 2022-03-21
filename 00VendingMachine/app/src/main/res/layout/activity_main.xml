@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:text="자판기 프로그램"
+        android:textAlignment="center"
+        android:layout_margin="10dp"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_launcher_foreground"
+        />
+    <TextView
+        android:id="@+id/tv_drinkname1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="콜라 800원"
+        />
+    <TextView
+        android:id="@+id/tv_drinkcnt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10개 남음"
+        />
+    <Button
+        android:id="@+id/btn_order1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="주문하기"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_launcher_foreground"
+            />
+        <TextView
+            android:id="@+id/tv_drinkname2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="콜라 800원"
+            />
+        <TextView
+            android:id="@+id/tv_drinkcnt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10개 남음"
+            />
+        <Button
+            android:id="@+id/btn_order2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="주문하기"/>
+    </LinearLayout>
+</LinearLayout>
+
+<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_launcher_foreground"
+                />
+            <TextView
+                android:id="@+id/tv_drinkname3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="콜라 800원"
+                />
+            <TextView
+                android:id="@+id/tv_drinkcnt3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10개 남음"
+                />
+            <Button
+                android:id="@+id/btn_order3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="주문하기"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_launcher_foreground"
+                />
+            <TextView
+                android:id="@+id/tv_drinkname4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="콜라 800원"
+                />
+            <TextView
+                android:id="@+id/tv_drinkcnt4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10개 남음"
+                />
+            <Button
+                android:id="@+id/btn_order4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="주문하기"/>
+        </LinearLayout>
+    </LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp">
+    <EditText
+        android:id="@+id/edt_usermoney"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="금액을 입력하세요."
+        android:layout_weight="3"/>
+    <Button
+        android:id="@+id/btn_inputmoney"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="금액 입력"
+        android:layout_weight="1"/>
+
+</LinearLayout>
+
+    <TextView
+        android:layout_marginLeft="30dp"
+        android:id="@+id/tv_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="잔액 : 0원"/>
+    <Button
+        android:id="@+id/btn_result"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="잔돈 반환"/>
+
+</LinearLayout>
