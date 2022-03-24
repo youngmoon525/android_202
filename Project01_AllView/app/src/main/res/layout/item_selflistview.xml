@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:background="#fff">
+
+<ImageView
+    android:background="#fff"
+    android:id="@+id/imgv_title"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:src="@drawable/ic_launcher_foreground"
+    />
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_launcher_foreground"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/tv_rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textSize="17dp"
+            android:textColor="#2C2C2C"
+            />
+        <View
+            android:layout_gravity="center"
+            android:layout_width="10dp"
+            android:layout_height="1dp"
+            android:background="#A8A8A8"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+    android:layout_width="0dp"
+    android:layout_height="50dp"
+    android:src="@drawable/ic_launcher_foreground"
+    android:layout_weight="1"
+        android:orientation="vertical"
+    >
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TOMBOY"
+            android:textSize="17dp"
+            android:textColor="#2C2C2C"
+            />
+        <TextView
+            android:id="@+id/tv_singer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(여자)아이들"
+            android:textColor="#818181"
+            />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_gravity="center"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/arrowright"
+
+        />
+
+</LinearLayout>

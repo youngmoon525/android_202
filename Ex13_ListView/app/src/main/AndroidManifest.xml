@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.ex11_backgroundservice">
+    package="com.example.ex13_listview">
 
     <application
         android:allowBackup="true"
@@ -8,17 +8,15 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Ex11_BackGroundService">
-        <service
-            android:name=".FileDownloadService"
-            android:enabled="true"
-            android:exported="true"></service>
-
+        android:theme="@style/Theme.Ex13_ListView">
+        <activity
+            android:name=".CustomListAct"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".FragAct"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

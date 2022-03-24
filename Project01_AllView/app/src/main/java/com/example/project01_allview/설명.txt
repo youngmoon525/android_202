@@ -1,0 +1,33 @@
+Project01_AllView
+
+<TabLayout>
+사용자가 화면을 옆으로 손가락으로 넘김 (Swipe)시켰을때 화면이 넘어가는 처리를 동적으로
+애니메이션효과를 주면서 사용할수있는 레이아웃.
+CoordinatorLayout
+    AppBarLayout
+        TabLayout
+
+01.ListView (복습)
+02.GridView (신규 , 격자형으로 같은 모양의 데이터를 보여줄때 사용) <- 같이 마스터됨
+03.RecyclerView ( 가로,세로 종횡 방향 모두 가능한 리스트뷰 (자식) ) ☆☆
+04.ViewPager2 ( 슬라이드 ) ↑ 리사이클러뷰 마스터 시 자동으로 습득 되는 부분.
+
+
+1.데이터를 바인딩 시킬 DTO를 먼저 만든다. ( 이름(String) , 상메(String) , 프로필(int,ImageRe..)
+2.데이터를 보여줄 형태를 가진 Layout을 만듬 ( res->layout )
+3.↑두가지를 이용해서 Adapter를 만듬.
+
+
+-BaseAdapter ( ListView ,GridView )
+-RecycleViewAdapter ( RecyclerView , ViewPager2 )
+
+
+실습 문제)
+패키지 추가 ex02selflistview
+-MainACtivity TabLayout에 내 리스트뷰라는 탭추가
+-해당하는 탭 선택시 나오게 만들 프래그먼트 추가 (ex MyListFragment)
+-내가 선정한 아이템에 대한 DTO , XML , ADAPTER 등 만들기
+----------------------------------------------------------------
+-같은 구간에서 10분이상 막히면 물어보기(저,주변)
+-프로젝트 진행 시 1시간이상 막히면 물어보기
+-↑처음 사용하는 API의 경우 하루~이틀 이상 막히면.
