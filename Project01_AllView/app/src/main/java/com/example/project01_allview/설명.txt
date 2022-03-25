@@ -19,6 +19,24 @@ CoordinatorLayout
 
 
 -BaseAdapter ( ListView ,GridView )
+ 1.extends BaseAdapter <= 일반 클래스에서 Adapter형태로 상속을 바꿔서 바뀜.
+ 2.메소드 상속 받기.
+
+     public int getCount() : 리스트뷰에 보여지는 총 리스트 요소의 갯수를 지정함.
+                            (DTO가 아직 준비가 안 된 상태에서는 대충 아무숫자나 넣고 모양만 볼수도있음)
+
+     public Object getItem(int i) : getItem메소드를 호출을 하면 ArrayList나 각종
+                                    Object를 리턴받기 위한메소드
+
+     public long getItemId(int i) : 각각의 리스트에 아이디를 리턴해주는 부분 (대부분 position리턴 key)
+
+     public View getView(int position, View convertView, ViewGroup parent)
+                                   : 칸마다 보여주는 데이터에 사용할 레이아웃을 붙이는 처리
+                                   : position 몇번째 칸.
+                                   : convertView 어떤 레이아웃?
+                                   : parent 몇번째 칸의 레이아웃(리스트뷰 0번째 레이아웃에 convertView붙임)
+
+
 -RecycleViewAdapter ( RecyclerView , ViewPager2 )
 
 

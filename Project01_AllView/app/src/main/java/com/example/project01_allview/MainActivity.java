@@ -4,10 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.example.project01_allview.ex01listview.ListFragment;
 import com.example.project01_allview.ex02selflistview.SelfListFragment;
+import com.example.project01_allview.ex03gridview.GridFragment;
+import com.example.project01_allview.ex04selfgridvew.SelfGridFragment;
 import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
@@ -16,6 +20,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ImageView imgv = findViewById(R.id.imgv);
+        Glide.with(this)
+                .load("https://cdn.notefolio.net/img/d6/3f/d63fc54819cd3fb0c319021e2e7cd6bfee951e8ce2db9e948bd828f538272da6_v1.jpg")
+                .into(imgv);
+
+
 
         getSupportFragmentManager().beginTransaction().replace(R.id.container
         ,   new ListFragment()).commit();
@@ -26,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         tab_layout.addTab(tab_layout.newTab().setText("리사이클러 뷰").setId(2) );
         tab_layout.addTab(tab_layout.newTab().setText("뷰 페이저").setId(3) );
         tab_layout.addTab(tab_layout.newTab().setText("내 리스트뷰").setId(4) );
+        tab_layout.addTab(tab_layout.newTab().setText("그리드 연습").setId(5) );
 
         tab_layout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             //1.탭이 선택 됨
@@ -41,7 +53,8 @@ public class MainActivity extends AppCompatActivity {
                            ,   new ListFragment()).commit();
 
                }else if(tab.getPosition() == 1){
-                   // ==
+                   getSupportFragmentManager().beginTransaction().replace(R.id.container
+                           ,   new GridFragment()).commit();
                }else if(tab.getPosition() == 2){
                     //==
                }else if(tab.getPosition() == 3){
@@ -50,6 +63,11 @@ public class MainActivity extends AppCompatActivity {
 
                    getSupportFragmentManager().beginTransaction().replace(R.id.container
                            ,   new SelfListFragment()).commit();
+
+               }else if(tab.getPosition() == 5){
+
+                   getSupportFragmentManager().beginTransaction().replace(R.id.container
+                           ,   new SelfGridFragment()).commit();
 
                }
             }
