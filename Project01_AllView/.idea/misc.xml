@@ -6,9 +6,11 @@
         <entry key="..\:/Study_Android/WorkSpace/Project01_AllView/app/src/main/res/layout/activity_main.xml" value="0.17" />
         <entry key="..\:/Study_Android/WorkSpace/Project01_AllView/app/src/main/res/layout/fragment_grid.xml" value="0.19947916666666668" />
         <entry key="..\:/Study_Android/WorkSpace/Project01_AllView/app/src/main/res/layout/fragment_list.xml" value="0.22" />
+        <entry key="..\:/Study_Android/WorkSpace/Project01_AllView/app/src/main/res/layout/fragment_recycler.xml" value="0.27239583333333334" />
         <entry key="..\:/Study_Android/WorkSpace/Project01_AllView/app/src/main/res/layout/fragment_self_grid.xml" value="0.18645833333333334" />
         <entry key="..\:/Study_Android/WorkSpace/Project01_AllView/app/src/main/res/layout/fragment_selflist.xml" value="0.1484375" />
         <entry key="..\:/Study_Android/WorkSpace/Project01_AllView/app/src/main/res/layout/item_listview.xml" value="0.25" />
+        <entry key="..\:/Study_Android/WorkSpace/Project01_AllView/app/src/main/res/layout/item_recview.xml" value="0.27239583333333334" />
         <entry key="..\:/Study_Android/WorkSpace/Project01_AllView/app/src/main/res/layout/item_selfgrid.xml" value="0.33" />
         <entry key="..\:/Study_Android/WorkSpace/Project01_AllView/app/src/main/res/layout/item_selflistview.xml" value="0.25" />
       </map>

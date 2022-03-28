@@ -12,6 +12,7 @@ import com.example.project01_allview.ex01listview.ListFragment;
 import com.example.project01_allview.ex02selflistview.SelfListFragment;
 import com.example.project01_allview.ex03gridview.GridFragment;
 import com.example.project01_allview.ex04selfgridvew.SelfGridFragment;
+import com.example.project01_allview.pack05recyclerview.RecyclerFragment;
 import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
@@ -48,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("탭", "onTabSelected: " + tab.getId() + " _" + tab.getPosition() +
                         " _" +tab.getText() );
                if(tab.getPosition() == 0){
-
                    getSupportFragmentManager().beginTransaction().replace(R.id.container
                            ,   new ListFragment()).commit();
 
@@ -56,7 +56,8 @@ public class MainActivity extends AppCompatActivity {
                    getSupportFragmentManager().beginTransaction().replace(R.id.container
                            ,   new GridFragment()).commit();
                }else if(tab.getPosition() == 2){
-                    //==
+                   getSupportFragmentManager().beginTransaction().replace(R.id.container
+                           ,   new RecyclerFragment()).commit();
                }else if(tab.getPosition() == 3){
                     //==
                }else if(tab.getPosition() == 4){

@@ -15,6 +15,11 @@ public class NastedMain {
         NastedC.A a = c.new A();
         a.field = "aa";
         a.method1();
+        //==============static 클래스(멤버) 사용하기 =========================//
+        NastedC.B b = new NastedC.B(); //스태틱 멤버이기때문에 클래스에만 접근해도 접근가능.
+        NastedC.B.bFieldStatic = "여기는 스태틱 클래스의 스태틱멤버";
+        NastedC.B.method2();//여기는 스태틱 클래스의 스태틱멤버
+        b.bField = "B클래스의 인스턴스 멤버";
 
     }
 }

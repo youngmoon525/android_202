@@ -39,6 +39,13 @@ CoordinatorLayout
 
 -RecycleViewAdapter ( RecyclerView , ViewPager2 )
 
+   //1.리사이클러뷰는 ViewHolder라는 클래스의 생성(InnerClass)을 강제하기 때문에
+    //중첩클래스로 ViewHolder를 만듬
+    //ViewHolder <= 매번 getView를 할때마다 위젯을 새로 찾고
+    //디자인을 다시 붙이는게 아니라 한번 찾은 인덱스는 미리 찾아놓은 클래스를 통해서
+    //사용할수있게함. // 즉 뷰(디자인묶음) 자체를 재활용 할수있는 형태로 사용.※
+
+
 
 실습 문제)
 패키지 추가 ex02selflistview

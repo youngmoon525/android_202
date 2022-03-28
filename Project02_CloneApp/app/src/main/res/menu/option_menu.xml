@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_search"
+        android:icon="@drawable/search"
+        android:title="검색"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/menu_talk"
+        android:icon="@drawable/talk"
+        android:title="대화"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/menu_music"
+        android:icon="@drawable/music"
+        android:title="음악"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/menu_etc"
+        android:icon="@drawable/etc"
+        android:title="메뉴"
+        app:showAsAction="always" />
+</menu>

@@ -1,5 +1,7 @@
 package com.example.project01_allview.ex00innerclass;
 
+import android.util.Log;
+
 public class NastedC {
     // 멤버 : 인스턴스 멤버 (instence) , 스태틱 멤버 (static)
     //인스턴스 멤버 : 해당하는 클래스의 내부에 있으며 반드시 인스턴스화 과정(new 클래스이름)
@@ -47,10 +49,31 @@ public class NastedC {
         }
         //1.NastedMain에서 멤버클래스인 B를 생성하기
         //2.B의 모든 멤버에 접근하기
-        //3.멤버클래스 A에서는 static 키워드를 사용할수가없었음
-        //멤버클래스 B에서는 왜 사용이 가능할까?
+        //3.멤버클래스 A에서는 static 키워드를 사용할수가없었음 - X
+        //멤버클래스 B에서는 왜 사용이 가능할까? - O
     }
 
+    //메소드 안쪽에서 만들어진 모든 것들은 지역변수 (지역멤버)
+
+    public void methodClass(){
+        int aa = 0 ; //<=? 이거 어떻게 쓸까?
+        class D{
+            //static String aaa = "";//<=2.요고 왜안될까?
+            int dFeild = 30;
+            void methodD(){
+                Log.d("메소드 D", "methodD: 접근");
+            }
+        }
+        aa = 30;
+        D d = new D();
+        d.dFeild = 40;
+        d.methodD();
+        // D라는 클래스에 있는 dfeild와 methodD사용해보기.
+        if(aa == 30){//메모리에서 올림.
+            int aaaa = 20 ; //<= if지역 변수
+        }//메모리에서 날림.
+
+    }
 
 
 

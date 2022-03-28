@@ -47,4 +47,5 @@ public class SelfGridAdapter extends BaseAdapter {
         tv_filename.setText(list.get(i).getText());
         return convertView;
     }
+
 }
