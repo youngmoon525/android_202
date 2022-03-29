@@ -38,4 +38,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     implementation 'de.hdodenhof:circleimageview:3.1.0'
+    // https://mvnrepository.com/artifact/com.github.bumptech.glide/glide
+    implementation group: 'com.github.bumptech.glide', name: 'glide', version: '4.12.0'
+
 }

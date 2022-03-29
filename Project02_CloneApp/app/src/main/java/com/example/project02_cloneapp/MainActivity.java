@@ -3,6 +3,7 @@ package com.example.project02_cloneapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -10,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.example.project02_cloneapp.chat.ChatFragment;
 import com.example.project02_cloneapp.friend.FriendFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -27,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
         actionBar.setTitle("친구");
         //actionBar.hide(); <= 전체 화면으로 컨텐트 부분을 더 넓게 보여주고싶다면
         //해당하는 페이지에서 숨김 처리도 가능함.
-        changeFragment();
         bottom_nav = findViewById(R.id.bottom_nav);
         bottom_nav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -37,8 +38,14 @@ public class MainActivity extends AppCompatActivity {
                 //프래그먼트가 각각의 화면에 맞게 전환 됨.
                 if(item.getItemId() == R.id.tab1){
                     Log.d(TAG, " 네비게이션 : 친구 ");
+                    actionBar.setTitle("친구");
+                    // 메소드 정의부(변수입력(파라메터 입력받는부분 )) + 메소드 호출부 (파라메터 넘겨주는부분)
+                    // Fragment fragment = new FriendFragment();
+                    changeFragment(new FriendFragment());
                 }else if(item.getItemId() == R.id.tab2){
                     Log.d(TAG, " 네비게이션 : 채팅 ");
+                    actionBar.setTitle("채팅");
+                    changeFragment(new ChatFragment());
                 }else if(item.getItemId() == R.id.tab3){
                     Log.d(TAG, " 네비게이션 : 뷰 ");
                 }else if(item.getItemId() == R.id.tab4){
@@ -76,9 +83,10 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    //프래그먼트 전환을 위한 메소드
-    public void  changeFragment(){
-        getSupportFragmentManager().beginTransaction().replace(R.id.container,new FriendFragment()).commit();
+    //프래그먼트 전환을 위한 메소드 ( 메소드를 활용해서 바텀네비게이션 메뉴가 바뀔때마다
+    //각각 다른 프래그먼트를 보여주는 처리 )
+    public void  changeFragment(Fragment fragment){
+        getSupportFragmentManager().beginTransaction().replace(R.id.container,fragment).commit();
     }
 
 }

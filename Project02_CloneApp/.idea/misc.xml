@@ -4,8 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Study_Android/WorkSpace/Project02_CloneApp/app/src/main/res/drawable/btm_nav_color.xml" value="0.181" />
+        <entry key="..\:/Study_Android/WorkSpace/Project02_CloneApp/app/src/main/res/layout/activity_detail.xml" value="0.24635416666666668" />
         <entry key="..\:/Study_Android/WorkSpace/Project02_CloneApp/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Study_Android/WorkSpace/Project02_CloneApp/app/src/main/res/layout/fragment_chat.xml" value="0.24635416666666668" />
         <entry key="..\:/Study_Android/WorkSpace/Project02_CloneApp/app/src/main/res/layout/fragment_friend.xml" value="0.33" />
+        <entry key="..\:/Study_Android/WorkSpace/Project02_CloneApp/app/src/main/res/layout/item_chat.xml" value="0.33" />
         <entry key="..\:/Study_Android/WorkSpace/Project02_CloneApp/app/src/main/res/layout/item_friend.xml" value="0.25" />
         <entry key="..\:/Study_Android/WorkSpace/Project02_CloneApp/app/src/main/res/menu/bottom_menu.xml" value="0.27239583333333334" />
         <entry key="..\:/Study_Android/WorkSpace/Project02_CloneApp/app/src/main/res/menu/option_menu.xml" value="0.125" />

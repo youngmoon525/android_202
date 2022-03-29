@@ -22,3 +22,17 @@ res/temes/themes 2개가있음 1.day(낮,스탠다드) , 2.night(어두움,저�
 -Glide <= url에 있는 이미지 사용하기 .※※※
 https://github.com/hdodenhof/CircleImageView
 build.gradle(module)여기에 추가하고 반드시 우측 상단에 "sync now" 해주기(다운)
+
+
+5.RecyClerView만들기 ※
+-1.디자인 단에 (Fragment,Activity) RecyclerView를 추가하기. <=
+-2.find를 통해서 위젯과 자바코드를 연결 하기. ( 나중에 해도 됨 )
+-3. DTO , XML(칸마다 보여줄 레이아웃)  순서 상관없음
+-4.Adapter ( 데이터 바인딩과 화면을 어떤걸 붙일껀지를 지정해놓은 객체 )
+    -> RecyclerAdapter의 경우 ViewHolder Class를 내부에 먼저 만들고 extends Recycler.ViewHolder
+    -> 그다음 extends RecyclerView.Adapter<VH(ViewHolder>를 해줌.
+    -> onCreateViewHolder <= ViewHolder를 만들어 내는 메소드 ( LayoutInflater가 필요함 )
+    -> onBindViewHolder <= 위에서 만들어진 뷰홀더를 이용해서 데이터 바인딩 처리를 한다.
+    -> getItemCount <= onCreateViewHolder를 몇개 만들건지 지정. (초기엔 return 숫자; 를 해줌 )
+-5.RecyclerView에 어댑터와 + LayoutManager연결.
+

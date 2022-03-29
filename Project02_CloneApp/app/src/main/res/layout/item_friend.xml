@@ -12,7 +12,7 @@
 
         <de.hdodenhof.circleimageview.CircleImageView
             xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/profile_image"
+            android:id="@+id/imgv_profile"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:src="@drawable/shopping"
@@ -25,12 +25,14 @@
             android:orientation="vertical"
             android:gravity="center">
             <TextView
+                android:id="@+id/tv_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="김영문"
                 android:textColor="#000"
                 android:textSize="16dp"/>
             <TextView
+                android:id="@+id/tv_msg"
                 android:layout_marginTop="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
