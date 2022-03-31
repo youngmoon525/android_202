@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <!-- gravity : 내부 정렬-->
+    <Button
+        android:gravity="left"
+        android:text="그냥 gravity 내부 정렬"
+        android:id="@+id/btn1"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"/>
+    <!-- layout_gravity : 외부 정렬-->
+    <Button
+        android:layout_gravity="right"
+        android:text="레이아웃 그래비티 부모기준 위치"
+        android:id="@+id/btn2"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tv1"
+        android:gravity="center"
+        android:text="텍스트뷰 사용하기"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/edt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="여기는 힌트 부분"/>
+    <ImageView
+        android:id="@+id/imgv1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@mipmap/ic_launcher"/>
+
+</LinearLayout>
