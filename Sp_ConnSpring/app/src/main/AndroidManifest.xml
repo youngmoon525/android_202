@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.sp_connspring">
+    <!--1.권한주기 인터넷과 네트워크 와이파이등을 사용하게끔 권한을 줌.-->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- 인터넷 권한 사용 ( 현재 )-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+
+    <!--2.usesClearTextTrafaffic <= 안드로이드는 기본적으로 http요청을 막아놓음(보안)
+        해당하는 속성을 true로주면 API와 연동하여 http요청하는것이 가능(HttpClient)
+        application 태그 안쪽에 넣어준다.
+    -->
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Sp_ConnSpring"
+        android:usesCleartextTraffic="true"
+        >
+        <!--3. http 요청가능한 lib를 사용중인 어플이것을 기재 (사용할것)-->
+        <uses-library android:name="org.apache.http.legacy"
+            android:required="false"/>
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
