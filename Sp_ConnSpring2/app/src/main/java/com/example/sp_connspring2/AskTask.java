@@ -1,4 +1,4 @@
-package com.example.sp_connspring;
+package com.example.sp_connspring2;
 
 import android.net.http.AndroidHttpClient;
 import android.os.AsyncTask;
@@ -18,18 +18,6 @@ import java.io.UnsupportedEncodingException;
 
 public class AskTask extends AsyncTask<String , String , Integer> {
 
-    //1.파라메터..( doInBackground = 어떤 비동기 작업을 실제로 처리하는 부분 )
-    // 여기에 필요한 변수를 뜻한다.
-    //<= 실사용에는 불편한점이 있어서 생성자를 이용해서 파라메터를 입력받을수가있음.
-    //doInBackground(*String... strings*)
-
-    //2.프로그레스 ( 작업이 어느정도 진행되었는지를 다른 태스크(액티비티)에서 확인할수있는
-    //변수를 뜻하는데 정확도가 낮아서 신빙성이 없는데이터이기 때문에 사용 x)
-    // Android => Spring에서의 작업 진행률을 확인할수가없음 => 정확 x
-
-    //3.Result ※
-    //작업을 완료하고나서 어떤 데이터를 리턴받기위한 타입.
-    // protected *Integer*
     final String HTTPIP = "http://192.168.0.38" ;//cmd -> ipconfig로 ip를 확인하고 넣어주기.
                                                  //  80외에 포트는 :포트번호 넣어주기.
     final String SVRPATH = "/mid/";             //<-server.xml에 기재된 path
@@ -41,20 +29,6 @@ public class AskTask extends AsyncTask<String , String , Integer> {
     private String mapping ; //mapping부분은 매번 달라질수있기때문에 객체생성시
                              //입력받아서 처리할수있게끔 필드로 만든다.
 
-    private String edtData;
-    private String edtData2;
-
-    public AskTask(String mapping, String edtData, String edtData2) {
-        this.mapping = mapping;
-        this.edtData = edtData;
-        this.edtData2 = edtData2;
-    }
-
-    // String edtData정의 = edt_data.getText().toString()호출
-    public AskTask(String mapping, String edtData) {
-        this.mapping = mapping;
-        this.edtData = edtData;
-    }
 
     public AskTask(String mapping) {
         this.mapping = mapping;
@@ -65,30 +39,16 @@ public class AskTask extends AsyncTask<String , String , Integer> {
         postUrl = HTTPIP + SVRPATH + mapping ; //http://192.168.0.38/mid/???
         builder = MultipartEntityBuilder.create();//new MultiPart...();API28미만은 안됨.
         builder.setMode(HttpMultipartMode.BROWSER_COMPATIBLE);//웹형태로 요청(Legacy)
-        //엔터를 치는 형식으로 URL을 요청하겠다 => www.naver.com
         //===============파라메터를 추가할 부분 ===================
-        // 여기 부분 포문으로 바꿔보기 ↓ ??
-        //Log.d("TAG", "doInBackground: " + edtData + edtData2);
-        builder.addTextBody("paramA", edtData,
+        builder.addTextBody("param" , "andSpring",
                 ContentType.create("Multipart/related" , "UTF-8"));
-        builder.addTextBody("paramB" , edtData2,
-                ContentType.create("Multipart/related" , "UTF-8"));
-        for(int i = Integer.parseInt(edtData) ; i<=Integer.parseInt(edtData2) ; i ++){ //
 
-        builder.addTextBody("param"+i , "andSpring"+i,
-                ContentType.create("Multipart/related" , "UTF-8"));
-        }
         //========================================================= json <= Gson<=
-
-
         httpClient = AndroidHttpClient.newInstance("Android");//new ..();
         httpPost = new HttpPost(postUrl);//url을 이용해서 post연결 객체 초기화
         httpPost.setEntity(builder.build());//http요청 모드를 builder이용해서 입력
 
         try {
-            //stream 흐름 프로그램 내부에서 밖으로 내보낼것인지 , 외부에서 내부로 들여올것인지.
-            //system.out.println <= out <= outputstream
-            //scanner . System.in <= in <= inputstream
             InputStream in = httpClient.execute(httpPost).getEntity().getContent();//실제 =>Spring으로 통신시작
             rtnString(in);
         } catch (IOException e) {
@@ -121,8 +81,4 @@ public class AskTask extends AsyncTask<String , String , Integer> {
         return null;
     }
 
-
-
-    //AskTask 는 extends를 해줘야만 인식을 한다. (해당하는 Class로)
-    //AskTask 는 클래스타입<> 에 3개의 클래스타입을 넘겨 줘야하는 형태.
 }
