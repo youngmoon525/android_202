@@ -1,0 +1,26 @@
+Test_ConnSpring <= 프로젝트 생성
+
+
+-작업순서
+	Gradle.module 확인 (필요한 API들이 추가 되었는지)
+	AndroidMenifest.xml 확인 ( 권한 , Http 요청 가능한 상태 , lib사용 등 )
+	Activity추가
+	AsyncTask 구성
+	AsyncTask로 아무 매핑이나 주고 통신이 잘되는지 확인
+	나머지 잔여 코딩.
+
+1.LoginActivity
+
+
+1.어싱크 테스크 이용해서 실제 로그인 처리를 해보기.
+UserDTO <= id , pw
+(Spring <=> Android) 데이터는 DTO로 전송함.(Gson이용)
+
+id가 admin pw 1234 이면. 로그인이 되게끔 처리
+Android => LoginActivity (로그인 성공 시 ) => MainActivity ( 이미지 뷰 ) + 회원정보(Spring에서 받은거)
+								        로그 또는 텍스트뷰에 뿌리기
+fromJson( Object.class) { id : "" , pw : "" }
+fromJson( TypeToken List구조일때만 ) [ { id : "" , pw : "" } , ....{ }... ]
+=========================================================================
+
+ 다 되고 심심하신분들은 mybatis이용해서 실제 테이블 W_MEMBER 에 있는 id , pw를 이용해서 로그인 처리해보기.

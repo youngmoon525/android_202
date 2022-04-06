@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.sp_connspring2">
-    <!--1.권한주기 인터넷과 네트워크 와이파이등을 사용하게끔 권한을 줌.-->
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <!-- 인터넷 권한 사용 ( 현재 )-->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!-- 1.권한주기 인터넷과 네트워크 와이파이등을 사용하게끔 권한을 줌. -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 인터넷 권한 사용 ( 현재 ) -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
         android:allowBackup="true"
@@ -15,17 +14,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sp_ConnSpring2"
         android:usesCleartextTraffic="true">
-        <uses-library android:name="org.apache.http.legacy"
-            android:required="false"/>
+        <activity
+            android:name=".ArrayActivity"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:exported="false" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
     </application>
 
 </manifest>
