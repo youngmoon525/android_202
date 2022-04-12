@@ -1,0 +1,64 @@
+네이버 - 두개 나눠짐.
+네이버 기본 기능 - 로그인 , 간단한 기능 제외
+네이버 콘솔 - 맵 Geocoder , static map , Mobile map  . . . ..  .
+  코틀린:NaverIdLoginSDK.initialize(context, {OAUTH_CLIENT_ID}, {OAUTH_CLIENT_SECRET}, {OAUTH_CLIENT_NAME});
+    자바:NaverIdLoginSDK.INSTANCE.initialize(
+                this,"dPPIq5XGJtg4QU0KlgaZ",
+                "8pNSZEnDCa",
+                "lastproject");
+
+
+
+                NidOAuthLogin().callProfileApi(object : NidProfileCallback<NidProfileResponse> {
+                    override fun onSuccess(response: NidProfileResponse) {
+                        Toast.makeText(context,"$response",Toast.LENGTH_SHORT).show()
+                        binding.tvApiResult.text = response.toString()
+                    }
+                    override fun onFailure(httpStatus: Int, message: String) {
+                        val errorCode = NaverIdLoginSDK.getLastErrorCode().code
+                        val errorDescription = NaverIdLoginSDK.getLastErrorDescription()
+                        Toast.makeText(context, "errorCode: $errorCode, errorDesc: $errorDesc", Toast.LENGTH_SHORT).show()
+                        binding.tvApiResult.text = ""
+                    }
+                    override fun onError(errorCode: Int, message: String) {
+                        onFailure(errorCode, message)
+                    }
+                })
+
+
+
+
+                        NidOAuthLogin authLogin = new NidOAuthLogin();
+                        authLogin.callProfileApi(new NidProfileCallback<NidProfileResponse>() {
+                            @Override
+                            public void onSuccess(NidProfileResponse nidProfileResponse) {
+                                Log.d(TAG, "onSuccess: " + nidProfileResponse.getProfile().getEmail());
+                                Log.d(TAG, "onSuccess: " + nidProfileResponse.getProfile().getMobile());
+                                Log.d(TAG, "onSuccess: " + nidProfileResponse.getProfile().getName());
+                            }
+
+                            @Override
+                            public void onFailure(int i, String s) {
+                                Log.d(TAG, "onFailure: " + s);
+                            }
+
+                            @Override
+                            public void onError(int i, String s) {
+                                Log.d(TAG, "onFailure: " + s);
+                            }
+                        });
+                //        NidOAuthLogin().callProfileApi(object : NidProfileCallback<NidProfileResponse> {
+                //            override fun onSuccess(response: NidProfileResponse) {
+                //                Toast.makeText(context,"$response",Toast.LENGTH_SHORT).show()
+                //                binding.tvApiResult.text = response.toString()
+                //            }
+                //            override fun onFailure(httpStatus: Int, message: String) {
+                //                val errorCode = NaverIdLoginSDK.getLastErrorCode().code
+                //                val errorDescription = NaverIdLoginSDK.getLastErrorDescription()
+                //                Toast.makeText(context, "errorCode: $errorCode, errorDesc: $errorDesc", Toast.LENGTH_SHORT).show()
+                //                binding.tvApiResult.text = ""
+                //            }
+                //            override fun onError(errorCode: Int, message: String) {
+                //                onFailure(errorCode, message)
+                //            }
+                //        })

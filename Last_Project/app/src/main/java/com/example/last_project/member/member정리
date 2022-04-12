@@ -1,0 +1,24 @@
+로그인(멤버)
+
+1.SharedPrefereces
+-라는 공유자원이 있음. 그 외에도 Android자체에서 사용하는 SqlLite 라는 자체 DataBase
+-많이 사용을 안하는 이유는 캐시를 지우면 전체 기록 된 정보가 삭제가 됨.
+(많이 사용을 안하고 자동로그인 정도만 사용을 함)
+    SharedPreferences preferences = getPreferences(LoginActivity.MODE_PRIVATE);
+        //공유자원을 사용하는 방법 1.생성 ↑
+
+        //데이터 넣기
+          SharedPreferences.Editor editor = preferences.edit();
+                editor.putString("test" , "data"); //test라는 key(name)을 구분자로 두고 data라는 값을 넣음.
+                editor.apply();
+
+        //데이터 가져오기
+            SharedPreferences preferences = getPreferences(LoginActivity.MODE_PRIVATE);
+            edt_id.setText(preferences.getString("test" , "null"));
+
+        //데이터 지우기
+            editor.remove("key");<=선택삭제
+            editor.clear(); <=전체삭제
+
+  class file for kotlinx.coroutines.Job not found
+  오류 발생시 - 코틀린 파일에 접근을 못하는 경우 나는 오류 ( 코틀린파일을 기본적으로 java에서 열수가없음)

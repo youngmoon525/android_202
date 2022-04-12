@@ -53,10 +53,33 @@
             android:layout_height="wrap_content"
             android:hint="비밀번호를 입력하세요"/>
     </LinearLayout>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/chk_auto"
+        android:text="자동 로그인"
+        android:layout_gravity="right"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="40dp"/>
+
     <Button
         android:layout_margin="30dp"
         android:text="로그인"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btn_login"/>
+    <com.navercorp.nid.oauth.view.NidOAuthLoginButton
+        android:id="@+id/btn_naver"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp" />
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:id="@+id/btn_kakao"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:src="@drawable/kakao_img"
+        android:layout_gravity="center"/>
+
+
 </LinearLayout>
