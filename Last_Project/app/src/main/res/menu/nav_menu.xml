@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    >
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@android:drawable/ic_menu_camera"
+            android:title="home"/>
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@android:drawable/ic_menu_gallery"
+            android:title="gallery"/>
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@android:drawable/ic_menu_slideshow"
+            android:title="slideshow"/>
+        <item
+            android:id="@+id/nav_manage"
+            android:icon="@android:drawable/ic_menu_manage"
+            android:title="manage"/>
+    </group>
+    <item
+        android:id="@+id/nav_compass"
+        android:title="CommuniCation"
+        android:visible="true">
+        <menu>
+            <item
+                android:id="@+id/nav_item1"
+                android:icon="@android:drawable/ic_menu_call"
+                android:title="call"/>
+            <item
+                android:id="@+id/nav_item2"
+                android:icon="@android:drawable/ic_menu_agenda"
+                android:title="agenda"/>
+
+        </menu>
+
+    </item>
+</menu>

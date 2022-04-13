@@ -1,0 +1,17 @@
+1. ITEM ( LAYOUT ) , DTO ( JAVA )
+ - 리사이클러뷰 칸마다 들어갈 Layout을 만듬 - o
+ - 리사이클러뷰 칸마다 들어갈 Layout => 위젯에 바뀌면서 들어갈 내용이 있는 DTO ( === Database )
+
+2. Adapter
+ - 위에 있는 두가지 리사이클러뷰 아이템과DTO를 이용해서 어댑터를 만들기
+ - Inner Class로 ViewHolder라는 Class를 만듬
+ - Adapter 상속
+ - LayoutInflater 객체가 반드시 필요함 <-※ 일반클래스는 Context가 없음
+ Fragment 나 Activity로 부터 받아오면 됨.
+
+    ViewHolder를 만들어 내는 구간
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        return null;
+    }
+   우리가 Adapter에서 내부에 만들어놓은 Class를 의미함
+   클래스를 생성할때는 반드시 생성자 메소드가 필요하다.

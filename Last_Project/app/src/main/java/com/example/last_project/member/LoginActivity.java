@@ -27,6 +27,7 @@ import com.kakao.sdk.auth.model.OAuthToken;
 import com.kakao.sdk.common.KakaoSdk;
 import com.kakao.sdk.common.model.ClientErrorCause;
 import com.kakao.sdk.user.UserApiClient;
+import com.kakao.sdk.user.model.Account;
 import com.navercorp.nid.NaverIdLoginSDK;
 import com.navercorp.nid.oauth.NidOAuthLogin;
 import com.navercorp.nid.oauth.OAuthLoginCallback;
@@ -75,15 +76,14 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public Unit invoke(OAuthToken oAuthToken, Throwable throwable) {
                if(oAuthToken != null){
-
+                   Log.d(TAG, " 카카오 토큰이 있음 . 로그인 정보를 빼오면 됨");
+                   getKakaoProfile();
                }else{
-
+                   Log.d(TAG, " 카카오 토큰이 없음 . " + throwable.toString());
                }
                return null;
             }
         };
-
-
         btn_kakao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -143,7 +143,7 @@ public class LoginActivity extends AppCompatActivity {
                     if(dao.isMemberLogin()) {
 
                         checkAutoLogin();
-
+                        goMain(); //Intent를 이용 메인액티비티로 이동.
                     }else{
                         chk_auto.setChecked(false);
                         checkAutoLogin();
@@ -157,6 +157,30 @@ public class LoginActivity extends AppCompatActivity {
         }
 
     }
+
+    public void getKakaoProfile(){
+        // 사용자 정보 요청 (기본)
+        UserApiClient.getInstance().me(  (user, throwable) -> {
+           if(throwable != null){
+               Log.d(TAG, " 사용자 정보 요청 실패"+ throwable.toString());
+               //오류가 났을때는 어떤 오류인지를 Kakao에서 제공해줌 . KOE + 숫자
+           }else{
+               // [ { } ] json 구조처럼 바로 데이터가 있는게 아니라 Accuount라는 키로 한칸을 들어감(오브젝트)
+               //그안에서 profile을 얻어 올수가있음.
+               Account account = user.getKakaoAccount();
+               if(account != null){
+
+                   Log.d(TAG, " 사용자 정보 요청 성공 : "+account.getProfile().getNickname());
+                   Log.d(TAG, " 사용자 정보 요청 성공 : "+account.getEmail());
+               }
+
+
+           }
+
+            return null;
+        });
+    }
+
 
     public void getNaverProfile(){ //<- 억세스 토큰 O일때만 성공함.
         NidOAuthLogin authLogin = new NidOAuthLogin();
@@ -180,6 +204,13 @@ public class LoginActivity extends AppCompatActivity {
         });
 
     }
+
+    public void goMain(){ //카카오 , 네이버 , 일반로그인 했을때 메인엑티비티로 이동하게끔처리.
+                         //카카오 , 네이버 로그인 시 회원정보가 x
+        Intent intent = new Intent(LoginActivity.this , MainActivity.class);
+        startActivity(intent);
+    }
+
 
     public void checkAutoLogin(){
         //해당하는 화면 외에는 공유를 안하는 경우.
