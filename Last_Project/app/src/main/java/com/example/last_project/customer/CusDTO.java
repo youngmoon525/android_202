@@ -1,6 +1,8 @@
 package com.example.last_project.customer;
 
-public class CusDTO {
+import java.io.Serializable;
+
+public class CusDTO implements Serializable {
     private int id ;
     private String name, gender, email, phone ;
 
@@ -37,6 +39,9 @@ public class CusDTO {
     }
 
     public String getPhone() {
+        if(phone == null){
+            return "정보 없음";
+        }
         return phone;
     }
 

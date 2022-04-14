@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="400dp"
+    android:layout_height="500dp"
+    android:orientation="vertical"
+    android:background="#F8F8F8"
+    tools:context=".customer.CusDetailActivity">
+
+    <ImageView
+        android:layout_marginTop="20dp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@mipmap/ic_launcher"/>
+    <TextView
+
+        android:id="@+id/edt_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="누구누구의 고객정보"
+        android:textSize="30dp"
+        android:textColor="#000"
+        android:textStyle="bold"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="30dp">
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:text="아이디 : "
+            android:textSize="15dp"
+            android:textColor="#000"
+            android:gravity="right"/>
+        <EditText
+            android:enabled="false"
+            android:id="@+id/edt_id"
+            android:textColor="#000"
+            android:layout_weight="3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="30dp">
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:text="이름 : "
+            android:textSize="15dp"
+            android:textColor="#000"
+            android:gravity="right"/>
+        <EditText
+
+            android:id="@+id/edt_name"
+            android:textColor="#000"
+            android:layout_weight="3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="30dp">
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:text="성별 : "
+            android:textSize="15dp"
+            android:textColor="#000"
+            android:gravity="right"/>
+        <RadioButton
+
+            android:id="@+id/rdo_man"
+            android:text="남"
+            android:textColor="#000"
+            android:layout_weight="1.5"
+            android:layout_width="0dp"
+            android:layout_height="30dp"/>
+        <RadioButton
+
+            android:id="@+id/rdo_woman"
+            android:text="여"
+            android:textColor="#000"
+            android:layout_weight="1.5"
+            android:layout_width="0dp"
+            android:layout_height="30dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="30dp">
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:text="핸드폰 : "
+            android:textSize="15dp"
+            android:textColor="#000"
+            android:gravity="right"/>
+        <EditText
+
+            android:id="@+id/edt_tel"
+            android:textColor="#000"
+            android:layout_weight="3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="30dp">
+        <Button
+
+            android:id="@+id/btn_edit"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="수정하기"
+            android:textSize="15dp"
+            android:background="#0E5018"
+            android:textStyle="bold"
+            android:textColor="#FFF"/>
+        <Button
+            android:id="@+id/btn_del"
+            android:layout_margin="10dp"
+            android:text="삭제하기"
+            android:textColor="#FFF"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:textStyle="bold"
+            android:background="#A31C3A"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</LinearLayout>
