@@ -22,6 +22,7 @@ public class CusAdapter extends RecyclerView.Adapter<CusAdapter.ViewHolder>{
     LayoutInflater inflater;
     ArrayList<CusDTO> list ;
     Context context;
+
     public ArrayList<CusDTO> getList() {
         return list;
     }

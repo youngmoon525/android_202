@@ -94,7 +94,7 @@ Button btn_edit , btn_del ;
                 AskTask task = new AskTask("update.cu");
                 task.addParam("dto" , gson.toJson(dto));
                 CommonMethod.executeAskGet(task); // true false / int 1,0 / String ...
-                //finish(); <= 테스트가 올바르게 끝나고 나서
+                finish(); //<= 테스트가 올바르게 끝나고 나서
             }
         });
         btn_del.setOnClickListener(new View.OnClickListener() {
@@ -105,6 +105,7 @@ Button btn_edit , btn_del ;
                 AskTask task = new AskTask("delete.cu");
                 task.addParam("dto" , gson.toJson(dto));
                 CommonMethod.executeAskGet(task);
+                finish();
             }
         });
     }
