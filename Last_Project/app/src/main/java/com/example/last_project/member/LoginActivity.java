@@ -61,6 +61,14 @@ public class LoginActivity extends AppCompatActivity {
                 "lastproject");
         KakaoSdk.init(this,"247d6205dcf6631decbb67cdd4b00880");
 
+        findViewById(R.id.btn_join).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this,JoinActivity.class);
+                startActivity(intent);
+            }
+        });
+
         ImageView btn_kakao = findViewById(R.id.btn_kakao);
         // 카카오계정으로 로그인 공통 callback 구성
         // 카카오톡으로 로그인 할 수 없어 카카오계정으로 로그인할 경우 사용됨

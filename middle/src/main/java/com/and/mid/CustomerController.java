@@ -32,8 +32,9 @@ public class CustomerController {
 	@RequestMapping(value ="/list.cu", produces = "application/json;charset=UTF-8")
 	public String list(HttpServletRequest req ) {
 		common.checkIp(req); // F6 STEP OVER , F8 RESUME PROGRAM
-		List<CusDTO> list = sql.selectList("cus.mapper.list");
-
+		String data = req.getParameter("data");
+		System.out.println(data);
+		List<CusDTO> list = sql.selectList("cus.mapper.list",data);
 		//내가 가지고있는 어떤 객체를 json(String) gson.toJson
 		return gson.toJson(list);
 	}

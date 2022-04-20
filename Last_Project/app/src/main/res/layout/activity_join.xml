@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".member.JoinActivity"
+    android:orientation="vertical">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@mipmap/ic_launcher"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:id="@+id/imgv_profile"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="아이디 : "
+            style="@style/join_tv"
+            android:layout_weight="1"/>
+        <EditText
+            android:id="@+id/edt_id"
+            style="@style/join_edt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="아이디를 입력해주세요."
+            android:layout_weight="1"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="비밀번호 : "
+            style="@style/join_tv"
+            android:layout_weight="1"/>
+        <EditText
+            android:id="@+id/edt_pw"
+            style="@style/join_edt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="비밀번호를 입력해주세요."
+            android:layout_weight="1"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="이름 : "
+            style="@style/join_tv"
+            android:layout_weight="1"/>
+        <EditText
+            android:id="@+id/edt_name"
+            style="@style/join_edt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="이름을 입력해주세요."
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="가입 하기"
+        android:layout_margin="10dp"
+        android:background="#4ECC6B"
+        android:id="@+id/btn_join"/>
+    <Button
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="취소 하기"
+        android:background="#BD5656"
+        android:id="@+id/btn_cancel"/>
+
+
+</LinearLayout>

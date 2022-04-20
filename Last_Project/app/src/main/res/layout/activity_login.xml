@@ -69,6 +69,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btn_login"/>
+    <Button
+        android:layout_margin="30dp"
+        android:text="회원 가입"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_join"/>
     <com.navercorp.nid.oauth.view.NidOAuthLoginButton
         android:id="@+id/btn_naver"
         android:layout_width="wrap_content"

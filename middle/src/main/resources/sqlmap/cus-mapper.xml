@@ -11,12 +11,16 @@
 	</select>
 
 	<select id="list" resultType="customer.CusDTO">
-		select * from customer
+		SELECT *
+		FROM CUSTOMER
+		WHERE EMAIL LIKE '%'||#{data,jdbcType=VARCHAR}||'%'
+		OR NAME LIKE  '%'||#{data,jdbcType=VARCHAR}||'%'
+		OR PHONE LIKE  '%'||#{data,jdbcType=VARCHAR}||'%'
 	</select>
 
 	<update id="update">
-	 	UPDATE CUSTOMER SET NAME = #{name}, GENDER = #{gender},  PHONE = #{phone}
-		WHERE  ID = #{id} 
+		UPDATE CUSTOMER SET NAME = #{name}, GENDER = #{gender}, PHONE = #{phone}
+		WHERE ID = #{id}
 	</update>
 	<delete id="delete">
 		DELETE FROM CUSTOMER WHERE ID = #{id}

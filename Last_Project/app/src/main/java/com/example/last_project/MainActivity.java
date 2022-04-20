@@ -18,6 +18,7 @@ import com.example.last_project.common.AskTask;
 import com.example.last_project.common.CommonMethod;
 import com.example.last_project.common.CommonVal;
 import com.example.last_project.customer.CusFragment;
+import com.example.last_project.employees.EmpFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
@@ -66,7 +67,7 @@ NavigationView nav_view;
                     changeFragment(new CusFragment());
                     Log.d(TAG, "menu_cus");
                 }else if(item.getItemId() == R.id.menu_emp){
-                    //Fragment 붙이는 처리
+                    changeFragment(new EmpFragment());
                     Log.d(TAG, "menu_emp");
                 }else if(item.getItemId() == R.id.menu_noti){
                     //Fragment 붙이는 처리

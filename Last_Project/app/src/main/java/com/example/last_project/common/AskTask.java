@@ -11,7 +11,9 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.ContentType;
 import org.apache.http.entity.mime.HttpMultipartMode;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
+import org.apache.http.entity.mime.content.FileBody;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -28,15 +30,20 @@ public class AskTask extends AsyncTask<String , String , InputStream> {
     private String mapping ; //mapping부분은 매번 달라질수있기때문에 객체생성시
                              //입력받아서 처리할수있게끔 필드로 만든다.
     ArrayList<AskDTO> paramList;
-
+    ArrayList<AskDTO> fileList;
 
     public AskTask(String mapping) {
         this.mapping = mapping;
         paramList = new ArrayList<>();
+        fileList = new ArrayList<>(); //<= String 값을 이용해서 (경로를 이용 파일로 만듬) FileBody
     }
     //paramList <Collection>자료구조를 이용해서 동적으로 파라메터를 추가하기위한 메소드.
     public void addParam(String key , String value){
         paramList.add(new AskDTO(key , value));
+    }
+
+    public void addFileParam(String key , String value){
+        fileList.add(new AskDTO(key , value));
     }
 
     @Override
@@ -49,6 +56,21 @@ public class AskTask extends AsyncTask<String , String , InputStream> {
             builder.addTextBody(paramList.get(i).getKey() , paramList.get(i).getValue(),
                     ContentType.create("Multipart/related" , "UTF-8"));
         }
+        for(int i = 0 ; i < fileList.size(); i++) {
+            File f = null;
+            try {
+                f = new File(fileList.get(i).getValue());
+            } catch (Exception e) {
+
+            }
+            if (f != null && f.exists()) {
+
+
+                builder.addPart(fileList.get(i).getKey(),
+                        new FileBody(f)
+                );
+            }
+        }//Spring Console> EOF<- 오류가 나면 ↑ 해당하는 파일을 버퍼형태의 바이트형식으로 못바꾸는 파일.
 
         //========================================================= json <= Gson<=
         httpClient = AndroidHttpClient.newInstance("Android");//new ..();

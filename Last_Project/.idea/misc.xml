@@ -4,13 +4,17 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Study_Android/WorkSpace/Last_Project/app/src/main/res/layout/activity_cus_detail.xml" value="0.25" />
-        <entry key="..\:/Study_Android/WorkSpace/Last_Project/app/src/main/res/layout/activity_login.xml" value="0.33" />
+        <entry key="..\:/Study_Android/WorkSpace/Last_Project/app/src/main/res/layout/activity_join.xml" value="0.25" />
+        <entry key="..\:/Study_Android/WorkSpace/Last_Project/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Study_Android/WorkSpace/Last_Project/app/src/main/res/layout/activity_main.xml" value="0.175" />
         <entry key="..\:/Study_Android/WorkSpace/Last_Project/app/src/main/res/layout/fragment_cus.xml" value="0.17" />
+        <entry key="..\:/Study_Android/WorkSpace/Last_Project/app/src/main/res/layout/fragment_emp.xml" value="0.178125" />
         <entry key="..\:/Study_Android/WorkSpace/Last_Project/app/src/main/res/layout/header_layout.xml" value="0.21354166666666666" />
         <entry key="..\:/Study_Android/WorkSpace/Last_Project/app/src/main/res/layout/item_recv_cus.xml" value="0.33" />
+        <entry key="..\:/Study_Android/WorkSpace/Last_Project/app/src/main/res/layout/item_recv_emp.xml" value="0.25" />
         <entry key="..\:/Study_Android/WorkSpace/Last_Project/app/src/main/res/menu/btm_menu.xml" value="0.22" />
         <entry key="..\:/Study_Android/WorkSpace/Last_Project/app/src/main/res/menu/nav_menu.xml" value="0.25" />
+        <entry key="..\:/Study_Android/WorkSpace/Last_Project/app/src/main/res/xml/filepath.xml" value="0.44110275689223055" />
       </map>
     </option>
   </component>
